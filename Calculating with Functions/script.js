@@ -15,6 +15,26 @@ The most outer function represents the left operand, the most inner function rep
 Division should be integer division. For example, this should return 2, not 2.666666...:
 eight(dividedBy(three()));
 
+CONCISE AND EASIER TO MAINTAIN
+
+const n = (n) => (fn) => fn ? fn(n) : n
+
+const zero = n(0)
+const one = n(1)
+const two = n(2)
+const three = n(3)
+const four = n(4)
+const five = n(5)
+const six = n(6)
+const seven = n(7)
+const eight = n(8)
+const nine = n(9)
+
+const plus = (b) => (a) => a + b
+const minus = (b) => (a) => a - b
+const times = (b) => (a) => a * b
+const dividedBy = (b) => (a) => Math.floor(a / b)
+
 */
 
 const zero = (func) => (func ? func(0) : 0)
